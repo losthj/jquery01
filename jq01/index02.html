@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    $(function () {
+        var div = $('<div>Hello world</div>');
+        console.log(div);
+        //console.log($('div')) //没有检测到
+
+        div.appendTo('body');
+        console.log($('div'))
+
+        var link = $('<a>', {  //<a>必需是空元素
+            text: 'bandu',
+            href: 'http://www.baidu.com',
+            target: '_blank',
+            title: 'goto baidu'
+        });
+        //link.appendTo('body');
+
+        var link2 = $('<a>baidu</a>').attr({
+            href: 'http://www.baidu.com',
+            target: '_blank',
+            title: 'goto baidu2'
+        })
+        link2.appendTo('body');
+    })
+</script>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>-->
+</head>
+<body>
+    <div id="div">
+        div
+    </div>
+</body>
+</html>
+<script>
+    $(function(){
+        var domObject = document.getElementById("div");
+        var jqueryObject = $("#div");
+        console.log(domObject)
+        console.log(jqueryObject)
+
+        //检测是DOM对象还是jquery对象
+        console.log(domObject.nodeType)  //1
+        console.log(jqueryObject.jquery)  //jquery版本号
+
+        //相互转换
+        console.log($(domObject))  
+        console.log(jqueryObject.get(0)) 
+    })
+</script>
