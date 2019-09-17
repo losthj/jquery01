@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2">
+            <div id="box3">
+                <p id="info">
+                    Lorem ispum dolor sit amet,
+                    consectetur adipisicing elit.Hic,rem?
+                </p>
+                <ul>
+                    <li class="item-1">item-1</li>
+                    <li class="item-2">item-2</li>
+                    <li class="item-3">item-3</li>
+                    <li class="item-4">item-4</li>
+                    <li class="item-5">item-5</li>
+                    <li class="item-6">item-6</li>
+                    <li class="item-7">item-7</li>
+                    <li class="item-8">item-8</li>
+                    <li class="item-9">item-9</li>
+                </ul>
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(function(){
+        //console.log($('#box3').children());
+        //console.log($('#box3').contents());
+
+        //console.log($('#box3').children('ul'));
+        //console.log($('#box3').contents('ul'));
+
+        //console.log($('#box3').find('ul'));
+        //console.log($('#box3').find('.item-3'));
+
+        //console.log($('#box3').parent())
+        //console.log($('#box3').parents())
+        //console.log($('#box3').parentsUntil())
+
+
+        console.log($('#info').parent('#box2'))
+        console.log($('#info').parents('#info')) //找多个元素
+        console.log($('#info').closest('#info')) //先找自身，然后在往上找,找到就停止了
+
+    })
+</script>
