@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .red{background-color:red}
+        .p10{padding:10px;}
+        .hide{display:none}
+    </style>
+</head>
+<body>
+    <div id="demo hide" class="box">
+        div
+    </div>
+    <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+</body>
+</html>
+<script>
+    $(function () {
+        var element = $('#demo');
+
+        //if (element.hasClass("hide")) {
+        //    element.removeClass('hide')
+        //} else {
+        //    element.addClass('hide')
+        //}
+
+        element.toggleClass('hide');
+
+        $('li').each(function (index) {
+            //console.log(index)
+            $(this).toggleClass('red', index % 3 === 0);
+        })
+    })
+</script>

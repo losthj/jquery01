@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <img id="logo" src="logo.jpg" alt="jQuery logo" class="img-jquery" title="jQuery logo" />
+    <input type="checkbox" id="check" tabIndex="1" style="width:50px;height:50px;"
+           title="Check this" description="just a checkbox" value="" checked />
+</body>
+</html>
+<script>
+    $(function () {
+        var img = document.getElementById("logo");
+        var checkbox = document.getElementById("check");
+        var img1 = $("#logo");
+        var checkbox1 = $("#check");
+
+        //console.log(img.attributes)
+        //console.log(img.getAttribute('class'))
+        //console.log(img.getAttribute('alt'))
+        //console.log(img.getAttribute('title'))
+        //console.log(img.getAttribute('src'))
+
+        //console.log(checkbox.getAttribute('tabindex'))  //特性
+        //console.log(checkbox.tabIndex)  //属性
+        //console.log(checkbox.getAttribute('style'))
+        //console.log(checkbox.style)
+
+        //console.log(checkbox.getAttribute('checked')) //空 没有值
+        //console.log(checkbox.checked)
+
+        //checkbox.title = 'new title';
+        //console.log(checkbox.getAttribute('title'))
+        //console.log(checkbox.title)
+        //console.log(checkbox.getAttribute('title') === checkbox.title)
+
+        //设置特性
+        //checkbox.setAttribute('title', 'another title')
+        //console.log(checkbox.getAttribute('title'))
+        //console.log(checkbox.title)
+        //console.log(checkbox.getAttribute('title') === checkbox.title)
+
+        //console.log(img.src);
+        //console.log(img.getAttribute('src'))
+
+        //获取属性
+        //console.log(checkbox1.prop('checked'));
+        //console.log(checkbox1.checked);//jquer对象，不是dom元素
+        //console.log(checkbox1.get(0).checked);
+        //console.log(checkbox1.attr('checked'));
+
+        img1.data({
+            data1: 'data1',
+            data2: 'data2',
+            data3: 'data3'
+        })
+       // console.log(img1.data())
+        //console.log(img1.removeData());
+        console.log($.hasData(img1.get(0)))
+    })
+   
+
+</script>

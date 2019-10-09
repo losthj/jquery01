@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>弹出框</title>
+	<meta charset="utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .layer-mask{
+            z-index:9999;
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:#000;
+            opacity:0.5;
+            display:none;
+        }
+        .layer-pop{
+            z-index:10000;
+            position:fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+            width:400px;
+            height:300px;
+            background:#fff;
+            display:none;
+        }
+        .layer-close{
+            float:right;
+            width:24px;
+            height:24px;
+            border:3px solid #fff;
+            text-align:center;
+            line-height:24px;
+            border-radius:50%;
+            background:#eee;
+            cursor:pointer;
+            margin-right:-12px;
+            margin-top:-12px;
+        }
+         .layer-close:hover{
+             background:#ccc;
+         }
+    </style>
+</head>
+<body>
+    1231231231212312
+    <a id="loginLink" href="#">登录</a>
+    <!--弹出层遮罩-->
+    <div id="layer-mask" class="layer-mask">
+
+    </div>
+    <!--弹出层窗体-->
+    <div id="layer-pop" class="layer-pop">
+        <!--弹出层关闭按钮-->
+        <div id="layer-close" class="layer-close">×</div>
+        <!--弹出层内容区域-->
+        <div id="layer-content" class="layer-content">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(function () {
+        $('#loginLink').click(function () {
+            $("#layer-mask").show();
+            $("#layer-pop").show();
+            $("#layer-close").click(function () {
+                $("#layer-mask").hide();
+                $("#layer-pop").hide();
+            });
+        })
+    })
+</script>
